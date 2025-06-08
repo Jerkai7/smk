@@ -1,62 +1,74 @@
-<!-- Tata Busana -->
-<h3>👗 Tata Busana</h3>
-<div class="gallery-grid">
-  <div class="gallery-card">
-    <div class="gallery-image-frame">
-      <img src="tata_busana_1.jpg" alt="Kegiatan Tata Busana">
-    </div>
-    <div class="gallery-caption">Siswa praktik menjahit busana seragam nasional</div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kegiatan Siswa</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1 { text-align: center; color: #2a5298; }
+    .kegiatan { max-width: 800px; margin: 30px auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .kegiatan h2 { font-size: 1.3rem; color: #333; margin-top: 0; }
+    .kegiatan p { line-height: 1.6; }
+    iframe { width: 100%; height: 315px; border: none; margin-bottom: 15px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>📚 Kegiatan Siswa SMKN 2 Lebong</h1>
+  <div id="kegiatan-list">
+    <p>Memuat kegiatan...</p>
   </div>
-  <div class="gallery-card">
-    <iframe src="https://www.youtube.com/embed/_X8Y_T2s8XM" allowfullscreen></iframe>
-    <div class="gallery-caption">Video dokumentasi fashion show karya siswa</div>
-  </div>
-</div>
 
-<!-- Teknik Instalasi Tenaga Listrik -->
-<h3>⚡ Teknik Instalasi Tenaga Listrik</h3>
-<div class="gallery-grid">
-  <div class="gallery-card">
-    <div class="gallery-image-frame">
-      <img src="listrik_1.jpg" alt="Kegiatan TITL">
-    </div>
-    <div class="gallery-caption">Praktik pemasangan instalasi rumah tangga</div>
-  </div>
-</div>
+  <script>
+    fetch('kegiatan_siswa.txt')
+      .then(response => response.text())
+      .then(text => {
+        const container = document.getElementById('kegiatan-list');
+        container.innerHTML = '';
+        const lines = text.trim().split('\n');
+        let html = '';
+        let currentTitle = '';
+        let currentVideo = '';
+        let currentDesc = '';
 
-<!-- Teknik dan Bisnis Sepeda Motor -->
-<h3>🏍️ Teknik dan Bisnis Sepeda Motor</h3>
-<div class="gallery-grid">
-  <div class="gallery-card">
-    <div class="gallery-image-frame">
-      <img src="tbsm_1.jpg" alt="Kegiatan TBSM">
-    </div>
-    <div class="gallery-caption">Siswa membongkar mesin motor matic</div>
-  </div>
-  <div class="gallery-card">
-    <iframe src="https://www.youtube.com/embed/rbukOuwYDQI" allowfullscreen></iframe>
-    <div class="gallery-caption">Video pelatihan TBSM dari diler Honda</div>
-  </div>
-</div>
+        for (let line of lines) {
+          if (line.startsWith('#')) {
+            if (currentTitle) {
+              html += '<div class="kegiatan">';
+              html += `<h2>${currentTitle}</h2>`;
+              if (currentVideo) {
+                html += `<iframe src="https://www.youtube.com/embed/${currentVideo}" allowfullscreen></iframe>`;
+              }
+              html += `<p>${currentDesc}</p>`;
+              html += '</div>';
+            }
+            currentTitle = line.substring(1).trim();
+            currentVideo = '';
+            currentDesc = '';
+          } else if (line.includes('youtu')) {
+            const id = line.split('youtu.be/')[1] || line.split('embed/')[1] || '';
+            currentVideo = id.split(/[?&]/)[0];
+          } else {
+            currentDesc += line + ' ';
+          }
+        }
 
-<!-- Teknik Kendaraan Ringan Otomotif -->
-<h3>🚗 Teknik Kendaraan Ringan Otomotif</h3>
-<div class="gallery-grid">
-  <div class="gallery-card">
-    <div class="gallery-image-frame">
-      <img src="tkro_1.jpg" alt="Kegiatan TKRO">
-    </div>
-    <div class="gallery-caption">Servis berkala kendaraan siswa</div>
-  </div>
-</div>
+        // add last item
+        if (currentTitle) {
+          html += '<div class="kegiatan">';
+          html += `<h2>${currentTitle}</h2>`;
+          if (currentVideo) {
+            html += `<iframe src="https://www.youtube.com/embed/${currentVideo}" allowfullscreen></iframe>`;
+          }
+          html += `<p>${currentDesc}</p>`;
+          html += '</div>';
+        }
 
-<!-- Desain Komunikasi Visual -->
-<h3>🎨 Desain Komunikasi Visual (DKV)</h3>
-<div class="gallery-grid">
-  <div class="gallery-card">
-    <div class="gallery-image-frame">
-      <img src="dkv_1.jpg" alt="Kegiatan DKV">
-    </div>
-    <div class="gallery-caption">Siswa mendesain poster digital dengan tablet</div>
-  </div>
-</div>
+        container.innerHTML = html;
+      })
+      .catch(error => {
+        document.getElementById('kegiatan-list').innerHTML = '<p>Gagal memuat data kegiatan.</p>';
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
