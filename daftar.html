@@ -1,0 +1,85 @@
+<style>
+  .daftar-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin: 40px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .daftar-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.1);
+    color: #fffb00;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueeAnim 14s linear infinite;
+  }
+
+  @keyframes marqueeAnim {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .btn-daftar {
+    display: inline-block;
+    background-color: #ffdc00;
+    color: #1e3c72;
+    font-weight: bold;
+    padding: 16px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    animation: blink 1.8s infinite;
+  }
+
+  .btn-daftar:hover {
+    background-color: white;
+    color: #1e3c72;
+    transform: scale(1.05);
+  }
+
+  @keyframes blink {
+    0%, 100% { box-shadow: 0 0 10px #ffeb3b; opacity: 1; }
+    50%      { box-shadow: 0 0 20px #ffff00; opacity: 0.8; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<section class="daftar-section">
+  <div class="marquee"><span>📣 Sistem Penerimaan Murid Baru (SPMB) Tahun 2025 Telah Dibuka! Daftarkan Dirimu Sekarang melalui Portal Resmi 🎓</span></div>
+
+  <h2>📝 SPMB SMK Negeri 2 Lebong</h2>
+  <p style="margin-bottom: 24px; font-size: 1.05rem;">
+    SMK Negeri 2 Lebong membuka pendaftaran siswa baru tahun ajaran 2025/2026 melalui sistem <strong>SPMB Online</strong>.<br>
+    Siapkan berkasmu dan segera daftar sebelum kuota habis!
+  </p>
+
+  <a href="https://spmb.smkn2lebong.com" target="_blank" class="btn-daftar">
+    📌 Klik Di Sini Untuk Daftar Sekarang
+  </a>
+</section>
