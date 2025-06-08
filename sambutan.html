@@ -3,30 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Sambutan Kepala Sekolah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2a5298;
+      margin-bottom: 30px;
+    }
+
+    .foto-container {
+      width: 200px;
+      height: 250px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .foto-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .identitas {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    .isi-sambutan {
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.7;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .isi-sambutan p {
+      margin-bottom: 1.2em;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Sambutan Kepala Sekolah</h1>
 
-  <!-- 🖼️ FOTO KEPALA SEKOLAH -->
-  <!-- GANTI 'kepala_sekolah.jpg' SESUAI LOKASI FILE -->
-  <div style="text-align: center; margin-bottom: 30px;">
-    <img src="kepala_sekolah.jpg"  <!-- ⬅️ GANTI jika gambarnya ada di folder, misal: src='img/kepala_sekolah.jpg' -->
-         alt="Kepala Sekolah SMK Negeri 2 Lebong - Hendri Gunawan, M.Pd."
-         style="max-width: 200px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
-    <p style="margin-top: 10px;">
-      <strong>Hendri Gunawan, M.Pd.</strong><br>
-      Kepala Sekolah
-    </p>
+  <!-- 📸 Foto kepala sekolah dalam frame -->
+  <div class="foto-container">
+    <img src="kepala_sekolah.jpg" alt="Kepala Sekolah SMK Negeri 2 Lebong">
   </div>
-  <!-- AKHIR FOTO -->
 
-  <!-- 📝 TEKS SAMBUTAN -->
-  <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
+  <!-- 👤 Nama dan jabatan -->
+  <div class="identitas">
+    <p>Hendri Gunawan, M.Pd.<br>Kepala Sekolah</p>
+  </div>
 
-  <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
+  <!-- 📝 Isi sambutan -->
+  <div class="isi-sambutan">
+    <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
 
-  <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar. Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi.</p>
-  <!-- AKHIR SAMBUTAN -->
+    <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
+
+    <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar.</p>
+
+    <p>Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi. Kami mengundang Anda semua untuk menjelajahi informasi di website ini sebagai bagian dari keterbukaan informasi publik dan layanan prima dari sekolah kami.</p>
+
+    <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
+  </div>
 
 </body>
 </html>
