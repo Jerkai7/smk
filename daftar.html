@@ -1,82 +1,98 @@
 <style>
   .daftar-section {
     padding: 60px 20px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #2b5876, #4e4376);
     color: white;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    margin: 40px 0;
-    animation: fadeIn 1s ease-in-out;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    margin: 50px auto;
+    max-width: 900px;
+    animation: fadeIn 1.2s ease-in-out;
   }
 
   .daftar-section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    letter-spacing: 1.2px;
+  }
+
+  .daftar-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
   }
 
   .marquee {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    box-sizing: border-box;
     background: rgba(255,255,255,0.1);
-    color: #fffb00;
+    color: #ffff33;
     font-weight: bold;
-    padding: 10px 0;
-    margin-bottom: 30px;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 8px rgba(255,255,0,0.3);
   }
 
   .marquee span {
     display: inline-block;
     padding-left: 100%;
-    animation: marqueeAnim 14s linear infinite;
+    animation: marqueeAnim 18s linear infinite;
   }
 
   @keyframes marqueeAnim {
-    0%   { transform: translateX(0); }
+    0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
   }
 
   .btn-daftar {
     display: inline-block;
-    background-color: #ffdc00;
-    color: #1e3c72;
-    font-weight: bold;
-    padding: 16px 30px;
-    border-radius: 50px;
+    background-color: #ffd700;
+    color: #2b5876;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 40px;
     font-size: 1.2rem;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    transition: all 0.3s ease-in-out;
-    animation: blink 1.8s infinite;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+    animation: blink 1.5s infinite;
   }
 
   .btn-daftar:hover {
     background-color: white;
-    color: #1e3c72;
-    transform: scale(1.05);
+    color: #2b5876;
+    transform: scale(1.08);
   }
 
   @keyframes blink {
-    0%, 100% { box-shadow: 0 0 10px #ffeb3b; opacity: 1; }
-    50%      { box-shadow: 0 0 20px #ffff00; opacity: 0.8; }
+    0%, 100% { box-shadow: 0 0 12px #fff176; opacity: 1; }
+    50% { box-shadow: 0 0 22px #ffeb3b; opacity: 0.85; }
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
+    from { opacity: 0; transform: translateY(40px); }
     to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .daftar-section h2 { font-size: 1.7rem; }
+    .btn-daftar { font-size: 1rem; padding: 14px 24px; }
   }
 </style>
 
 <section class="daftar-section">
-  <div class="marquee"><span>📣 Sistem Penerimaan Murid Baru (SPMB) Tahun 2025 Telah Dibuka! Daftarkan Dirimu Sekarang melalui Portal Resmi 🎓</span></div>
+  <div class="marquee">
+    <span>📣 Penerimaan Peserta Didik Baru (SPMB) SMKN 2 Lebong Tahun 2025 Telah Dibuka! Daftar Sekarang Sebelum Kuota Habis 🚀</span>
+  </div>
 
-  <h2>📝 SPMB SMK Negeri 2 Lebong</h2>
-  <p style="margin-bottom: 24px; font-size: 1.05rem;">
-    SMK Negeri 2 Lebong membuka pendaftaran siswa baru tahun ajaran 2025/2026 melalui sistem <strong>SPMB Online</strong>.<br>
-    Siapkan berkasmu dan segera daftar sebelum kuota habis!
+  <h2>📝 Pendaftaran SPMB SMK Negeri 2 Lebong</h2>
+  <p>
+    SMKN 2 Lebong membuka pendaftaran siswa baru Tahun Ajaran <strong>2025/2026</strong> melalui sistem <strong>SPMB Online</strong>.<br>
+    Jangan lewatkan kesempatanmu! Siapkan berkas dan segera daftar.
   </p>
 
   <a href="https://spmb.smkn2lebong.com" target="_blank" class="btn-daftar">
