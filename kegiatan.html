@@ -1,161 +1,62 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Galeri Kegiatan Jurusan</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fa;
-      padding: 20px;
-      color: #333;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    h3 {
-      margin-top: 50px;
-      font-size: 1.3rem;
-      color: #0a3d62;
-      text-align: center;
-    }
-
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
-      margin-bottom: 50px;
-    }
-
-    .gallery-card {
-      width: 280px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .gallery-image-frame {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-    }
-
-    .gallery-image-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .gallery-card iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      display: block;
-    }
-
-    .gallery-caption {
-      padding: 14px;
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    @media (max-width: 600px) {
-      .gallery-card {
-        width: 95%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <h2>📸 Galeri Kegiatan Jurusan</h2>
-
-  <!-- ✅ 1. Tata Busana -->
-  <h3>👗 Tata Busana</h3>
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <div class="gallery-image-frame">
-        <img src="tata_busana_1.jpg" alt="Kegiatan Tata Busana">
-      </div>
-      <div class="gallery-caption">Siswa praktik menjahit busana seragam nasional</div>
+<!-- Tata Busana -->
+<h3>👗 Tata Busana</h3>
+<div class="gallery-grid">
+  <div class="gallery-card">
+    <div class="gallery-image-frame">
+      <img src="tata_busana_1.jpg" alt="Kegiatan Tata Busana">
     </div>
-    <div class="gallery-card">
-      <iframe src="https://youtu.be/_X8Y_T2s8XM" allowfullscreen></iframe>
-      <div class="gallery-caption">Video dokumentasi fashion show karya siswa</div>
-    </div>
+    <div class="gallery-caption">Siswa praktik menjahit busana seragam nasional</div>
   </div>
-
-  <!-- ✅ 2. Teknik Instalasi Tenaga Listrik -->
-  <h3>⚡ Teknik Instalasi Tenaga Listrik</h3>
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <div class="gallery-image-frame">
-        <img src="listrik_1.jpg" alt="Kegiatan TITL">
-      </div>
-      <div class="gallery-caption">Praktik pemasangan instalasi rumah tangga</div>
-    </div>
-    <div class="gallery-card">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_LISTRIK" allowfullscreen></iframe>
-      <div class="gallery-caption">Dokumentasi praktek TITL kelas XII</div>
-    </div>
+  <div class="gallery-card">
+    <iframe src="https://www.youtube.com/embed/_X8Y_T2s8XM" allowfullscreen></iframe>
+    <div class="gallery-caption">Video dokumentasi fashion show karya siswa</div>
   </div>
+</div>
 
-  <!-- ✅ 3. Teknik dan Bisnis Sepeda Motor -->
-  <h3>🏍️ Teknik dan Bisnis Sepeda Motor</h3>
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <div class="gallery-image-frame">
-        <img src="tbsm_1.jpg" alt="Kegiatan TBSM">
-      </div>
-      <div class="gallery-caption">Siswa membongkar mesin motor matic</div>
+<!-- Teknik Instalasi Tenaga Listrik -->
+<h3>⚡ Teknik Instalasi Tenaga Listrik</h3>
+<div class="gallery-grid">
+  <div class="gallery-card">
+    <div class="gallery-image-frame">
+      <img src="listrik_1.jpg" alt="Kegiatan TITL">
     </div>
-    <div class="gallery-card">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_TBSM" allowfullscreen></iframe>
-      <div class="gallery-caption">Video pelatihan TBSM dari diler Honda</div>
-    </div>
+    <div class="gallery-caption">Praktik pemasangan instalasi rumah tangga</div>
   </div>
+</div>
 
-  <!-- ✅ 4. Teknik Kendaraan Ringan Otomotif -->
-  <h3>🚗 Teknik Kendaraan Ringan Otomotif</h3>
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <div class="gallery-image-frame">
-        <img src="tkro_1.jpg" alt="Kegiatan TKRO">
-      </div>
-      <div class="gallery-caption">Servis berkala kendaraan siswa</div>
+<!-- Teknik dan Bisnis Sepeda Motor -->
+<h3>🏍️ Teknik dan Bisnis Sepeda Motor</h3>
+<div class="gallery-grid">
+  <div class="gallery-card">
+    <div class="gallery-image-frame">
+      <img src="tbsm_1.jpg" alt="Kegiatan TBSM">
     </div>
-    <div class="gallery-card">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_TKRO" allowfullscreen></iframe>
-      <div class="gallery-caption">Simulasi uji rem dan sistem kemudi</div>
-    </div>
+    <div class="gallery-caption">Siswa membongkar mesin motor matic</div>
   </div>
-
-  <!-- ✅ 5. Desain Komunikasi Visual -->
-  <h3>🎨 Desain Komunikasi Visual (DKV)</h3>
-  <div class="gallery-grid">
-    <div class="gallery-card">
-      <div class="gallery-image-frame">
-        <img src="dkv_1.jpg" alt="Kegiatan DKV">
-      </div>
-      <div class="gallery-caption">Siswa mendesain poster digital dengan tablet</div>
-    </div>
-    <div class="gallery-card">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID_DKV" allowfullscreen></iframe>
-      <div class="gallery-caption">Video animasi karya siswa DKV kelas XII</div>
-    </div>
+  <div class="gallery-card">
+    <iframe src="https://www.youtube.com/embed/rbukOuwYDQI" allowfullscreen></iframe>
+    <div class="gallery-caption">Video pelatihan TBSM dari diler Honda</div>
   </div>
+</div>
 
-</body>
-</html>
+<!-- Teknik Kendaraan Ringan Otomotif -->
+<h3>🚗 Teknik Kendaraan Ringan Otomotif</h3>
+<div class="gallery-grid">
+  <div class="gallery-card">
+    <div class="gallery-image-frame">
+      <img src="tkro_1.jpg" alt="Kegiatan TKRO">
+    </div>
+    <div class="gallery-caption">Servis berkala kendaraan siswa</div>
+  </div>
+</div>
+
+<!-- Desain Komunikasi Visual -->
+<h3>🎨 Desain Komunikasi Visual (DKV)</h3>
+<div class="gallery-grid">
+  <div class="gallery-card">
+    <div class="gallery-image-frame">
+      <img src="dkv_1.jpg" alt="Kegiatan DKV">
+    </div>
+    <div class="gallery-caption">Siswa mendesain poster digital dengan tablet</div>
+  </div>
+</div>
