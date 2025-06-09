@@ -1,101 +1,194 @@
-<style>
-  .daftar-section {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #2b5876, #4e4376);
-    color: white;
-    text-align: center;
-    border-radius: 24px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    margin: 50px auto;
-    max-width: 900px;
-    animation: fadeIn 1.2s ease-in-out;
-  }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Informasi SPMB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  .daftar-section h2 {
-    font-size: 2.4rem;
-    margin-bottom: 16px;
-    letter-spacing: 1.2px;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      color: #333;
+    }
 
-  .daftar-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
+    header {
+      background: #0a3d62;
+      color: #ffffff;
+      text-align: center;
+      padding: 1.5rem 10px;
+      position: relative;
+      z-index: 1;
+    }
 
-  .marquee {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background: rgba(255,255,255,0.1);
-    color: #ffff33;
-    font-weight: bold;
-    padding: 12px 0;
-    font-size: 1.05rem;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: inset 0 0 8px rgba(255,255,0,0.3);
-  }
+    nav {
+      background: #1e3799;
+      overflow: auto;
+      white-space: nowrap;
+    }
 
-  .marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marqueeAnim 18s linear infinite;
-  }
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  @keyframes marqueeAnim {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+    nav a:hover {
+      background-color: #4a69bd;
+    }
 
-  .btn-daftar {
-    display: inline-block;
-    background-color: #ffd700;
-    color: #2b5876;
-    font-weight: 600;
-    padding: 16px 32px;
-    border-radius: 40px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
-    transition: all 0.3s ease;
-    animation: blink 1.5s infinite;
-  }
+    section#spmb {
+      padding: 32px;
+      background-color: #f2f9f8;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  .btn-daftar:hover {
-    background-color: white;
-    color: #2b5876;
-    transform: scale(1.08);
-  }
+    section#spmb h2 {
+      color: #007b5e;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
 
-  @keyframes blink {
-    0%, 100% { box-shadow: 0 0 12px #fff176; opacity: 1; }
-    50% { box-shadow: 0 0 22px #ffeb3b; opacity: 0.85; }
-  }
+    section#spmb h3 {
+      color: #333;
+      font-size: 18px;
+      margin-top: 24px;
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+    section#spmb ul,
+    section#spmb ol {
+      margin-left: 1.5em;
+      line-height: 1.8;
+    }
 
-  @media (max-width: 600px) {
-    .daftar-section h2 { font-size: 1.7rem; }
-    .btn-daftar { font-size: 1rem; padding: 14px 24px; }
-  }
-</style>
+    section#spmb a.daftar-button {
+      display: inline-block;
+      padding: 14px 30px;
+      background-color: #007b5e;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
 
-<section class="daftar-section">
-  <div class="marquee">
-    <span>📣 Penerimaan Peserta Didik Baru (SPMB) SMKN 2 Lebong Tahun 2025 Telah Dibuka! Daftar Sekarang Sebelum Kuota Habis 🚀</span>
-  </div>
+    section#spmb a.daftar-button:hover {
+      background-color: #009f7f;
+    }
 
-  <h2>📝 Pendaftaran SPMB SMK Negeri 2 Lebong</h2>
-  <p>
-    SMKN 2 Lebong membuka pendaftaran siswa baru Tahun Ajaran <strong>2025/2026</strong> melalui sistem <strong>SPMB Online</strong>.<br>
-    Jangan lewatkan kesempatanmu! Siapkan berkas dan segera daftar.
-  </p>
+    marquee {
+      color: red;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
 
-  <a href="https://spmb.smkn2lebong.com" target="_blank" class="btn-daftar">
-    📌 Klik Di Sini Untuk Daftar Sekarang
-  </a>
-</section>
+    footer {
+      background: #0a3d62;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔵 HEADER -->
+  <header>
+    <h1>SMK Negeri 2 Lebong</h1>
+  </header>
+
+  <!-- 🔗 NAVIGASI -->
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="sambutan.html">Sambutan</a>
+    <a href="guru.html">Guru</a>
+    <a href="siswa.html">Siswa</a>
+    <a href="spmb.html">SPMB</a>
+  </nav>
+
+  <!-- 📄 INFORMASI SPMB -->
+  <section id="spmb">
+    <h2>📝 Informasi Pendaftaran SPMB SMK Negeri 2 Lebong</h2>
+
+    <div>
+      <h3>🎓 Jurusan yang Tersedia:</h3>
+      <ul>
+        <li>Tata Busana</li>
+        <li>Teknik Instalasi Tenaga Listrik</li>
+        <li>Teknik dan Bisnis Sepeda Motor</li>
+        <li>Teknik Kendaraan Ringan Otomotif</li>
+        <li>Desain Komunikasi Visual</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>📄 Syarat Pendaftaran:</h3>
+      <ol>
+        <li>Menyertakan bukti cetak daftar SPMB online</li>
+        <li>Fotokopi Kartu Keluarga (KK)</li>
+        <li>Fotokopi Akta Kelahiran</li>
+        <li>Fotokopi Ijazah atau Surat Keterangan Lulus (SKL)</li>
+        <li>Pas Foto 3x4 berwarna sebanyak 3 lembar</li>
+        <li>Fotokopi KIP, KKS (jika ada)</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>📁 Ketentuan Map Pendaftaran:</h3>
+      <ul>
+        <li><strong>Tata Busana:</strong> Map plastik warna kuning</li>
+        <li><strong>Teknik Instalasi Tenaga Listrik:</strong> Map plastik warna biru</li>
+        <li><strong>Teknik dan Bisnis Sepeda Motor:</strong> Map plastik warna merah</li>
+        <li><strong>Teknik Kendaraan Ringan Otomotif:</strong> Map plastik warna merah</li>
+        <li><strong>Desain Komunikasi Visual:</strong> Map plastik warna kuning</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>📅 Jadwal Pendaftaran SPMB:</h3>
+      <ul>
+        <li><strong>Formulir Online:</strong> 9 Juni – 8 Juli 2025</li>
+        <li><strong>Penyerahan Berkas ke Panitia:</strong> 23 Juni – 8 Juli 2025</li>
+        <li><strong>Pengumuman Hasil Seleksi:</strong> 9 Juli 2025</li>
+        <li><strong>Daftar Ulang:</strong> 10 – 11 Juli 2025</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="https://jerkai7.github.io/myform/" target="_blank" class="daftar-button">
+        🖱️ Daftar SPMB Online Sekarang
+      </a>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <marquee scrollamount="5">
+        ⚠️ Ayo segera daftar ke SMK Negeri 2 Lebong! Form online dibuka mulai 9 Juni - 8 Juli 2025. Penyerahan berkas langsung ke panitia mulai 23 Juni 2025.
+      </marquee>
+    </div>
+  </section>
+
+  <!-- 🔚 FOOTER -->
+  <footer>
+    &copy; 2025 SMK Negeri 2 Lebong. All rights reserved.
+  </footer>
+
+</body>
+</html>
