@@ -3,19 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Sambutan Kepala Sekolah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fa;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       color: #333;
+    }
+
+    header {
+      background: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 1rem 10px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background: #3c6382;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: #0a3d62;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background: #1e6091;
     }
 
     h1 {
       text-align: center;
       color: #2a5298;
-      margin-bottom: 30px;
+      margin: 40px 20px 20px;
     }
 
     .foto-container {
@@ -52,34 +82,58 @@
     .isi-sambutan p {
       margin-bottom: 1.2em;
     }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        width: 90%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <h1>Sambutan Kepala Sekolah</h1>
+  <header>
+    <h1>SMK Negeri 2 Lebong</h1>
+    <p>Sambutan Kepala Sekolah</p>
+  </header>
 
-  <!-- 📸 Foto kepala sekolah dalam frame -->
-  <div class="foto-container">
-    <img src="kepala_sekolah.jpg" alt="Kepala Sekolah SMK Negeri 2 Lebong">
-  </div>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="sambutan.html">Sambutan</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="informasi.html">Informasi</a>
+    <a href="ppdb.html">PPDB</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
 
-  <!-- 👤 Nama dan jabatan -->
-  <div class="identitas">
-    <p>Hendri Gunawan, M.Pd.<br>Kepala Sekolah</p>
-  </div>
+  <main>
+    <h1>Sambutan Kepala Sekolah</h1>
 
-  <!-- 📝 Isi sambutan -->
-  <div class="isi-sambutan">
-    <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
+    <div class="foto-container">
+      <img src="kepala_sekolah.jpg" alt="Kepala Sekolah SMK Negeri 2 Lebong">
+    </div>
 
-    <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
+    <div class="identitas">
+      <p>Hendri Gunawan, M.Pd.<br>Kepala Sekolah</p>
+    </div>
 
-    <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar.</p>
+    <div class="isi-sambutan">
+      <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
 
-    <p>Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi. Kami mengundang Anda semua untuk menjelajahi informasi di website ini sebagai bagian dari keterbukaan informasi publik dan layanan prima dari sekolah kami.</p>
+      <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
 
-    <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
-  </div>
+      <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar.</p>
+
+      <p>Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi. Kami mengundang Anda semua untuk menjelajahi informasi di website ini sebagai bagian dari keterbukaan informasi publik dan layanan prima dari sekolah kami.</p>
+
+      <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
+    </div>
+  </main>
 
 </body>
 </html>
