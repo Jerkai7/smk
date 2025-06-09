@@ -3,55 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Sambutan Kepala Sekolah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fa;
       margin: 0;
       padding: 0;
       color: #333;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     header {
       background: #0a3d62;
-      color: white;
+      color: #ffffff;
       text-align: center;
-      padding: 1rem 10px;
+      padding: 1.5rem 10px;
+      position: relative;
+      z-index: 1;
     }
 
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      background: #3c6382;
-      padding: 10px;
+      background: #1e3799;
+      overflow: auto;
+      white-space: nowrap;
     }
 
     nav a {
+      display: inline-block;
       color: white;
+      padding: 14px 20px;
       text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      background: #0a3d62;
-      font-size: 0.95rem;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background: #1e6091;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2a5298;
-      margin: 40px 20px 20px;
+      background-color: #4a69bd;
     }
 
     .foto-container {
       width: 200px;
       height: 250px;
-      margin: 0 auto;
+      margin: 20px auto 10px;
       overflow: hidden;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -83,57 +81,57 @@
       margin-bottom: 1.2em;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        width: 90%;
-        text-align: center;
-      }
+    footer {
+      background: #0a3d62;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
+  <!-- 🔵 HEADER SEKOLAH -->
   <header>
     <h1>SMK Negeri 2 Lebong</h1>
-    <p>Sambutan Kepala Sekolah</p>
   </header>
 
+  <!-- 🔗 NAVIGASI -->
   <nav>
     <a href="index.html">Beranda</a>
     <a href="profil.html">Profil</a>
     <a href="sambutan.html">Sambutan</a>
-    <a href="kegiatan.html">Kegiatan</a>
-    <a href="informasi.html">Informasi</a>
-    <a href="ppdb.html">PPDB</a>
-    <a href="kontak.html">Kontak</a>
+    <a href="guru.html">Guru</a>
+    <a href="siswa.html">Siswa</a>
+    <a href="spmb.html">SPMB</a>
   </nav>
 
-  <main>
-    <h1>Sambutan Kepala Sekolah</h1>
+  <!-- 📸 FOTO & IDENTITAS -->
+  <div class="foto-container">
+    <img src="kepala_sekolah.jpg" alt="Kepala Sekolah SMK Negeri 2 Lebong">
+  </div>
+  <div class="identitas">
+    <p>Hendri Gunawan, M.Pd.<br>Kepala Sekolah</p>
+  </div>
 
-    <div class="foto-container">
-      <img src="kepala_sekolah.jpg" alt="Kepala Sekolah SMK Negeri 2 Lebong">
-    </div>
+  <!-- 📝 ISI SAMBUTAN -->
+  <div class="isi-sambutan">
+    <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
 
-    <div class="identitas">
-      <p>Hendri Gunawan, M.Pd.<br>Kepala Sekolah</p>
-    </div>
+    <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
 
-    <div class="isi-sambutan">
-      <p>Assalamu’alaikum warahmatullahi wabarakatuh,</p>
+    <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar.</p>
 
-      <p>Puji syukur kita panjatkan ke hadirat Allah SWT atas segala rahmat dan karunia-Nya. Dengan bangga saya menyambut Anda di website resmi SMK Negeri 2 Lebong, sebuah media informasi dan komunikasi antara sekolah dengan masyarakat luas.</p>
+    <p>Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi. Kami mengundang Anda semua untuk menjelajahi informasi di website ini sebagai bagian dari keterbukaan informasi publik dan layanan prima dari sekolah kami.</p>
 
-      <p>Sebagai sekolah menengah kejuruan negeri yang terletak di Tangua, Kecamatan Uram Jaya, Kabupaten Lebong, kami terus berkomitmen untuk memberikan layanan pendidikan terbaik kepada seluruh peserta didik, orang tua, dan masyarakat sekitar.</p>
+    <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
+  </div>
 
-      <p>Kami percaya bahwa pendidikan vokasi adalah kunci untuk mencetak generasi yang terampil, mandiri, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan tinggi. Kami mengundang Anda semua untuk menjelajahi informasi di website ini sebagai bagian dari keterbukaan informasi publik dan layanan prima dari sekolah kami.</p>
-
-      <p>Wassalamu’alaikum warahmatullahi wabarakatuh.</p>
-    </div>
-  </main>
+  <!-- 🔚 FOOTER -->
+  <footer>
+    &copy; 2025 SMK Negeri 2 Lebong. All rights reserved.
+  </footer>
 
 </body>
 </html>
